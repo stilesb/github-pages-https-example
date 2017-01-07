@@ -10,7 +10,7 @@
 
 ```
 mdkir docs
-cat <<EOT >> docs/index.html
+cat <<EOT>> docs/index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
