@@ -9,21 +9,35 @@
 - Add a `docs` folder and include an `index.html` file there
 
 ```
-mdkir docs
-cat <<EOT>> docs/index.html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>HTML5 Boilerplate</title>
-    <link rel="stylesheet" href="css/style.css">
     <!--[if IE]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
+
 <body>
-     <h1>HTML5 Boilerplate</h1>
+    <h1>HTML5 Boilerplate</h1>
+    <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message": "This website uses cookies to ensure you get the best experience on our website",
+            "dismiss": "Got it!",
+            "learnMore": "More info",
+            "link": null,
+            "theme": "light-bottom"
+        };
+    </script>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+    <!-- End Cookie Consent plugin -->
+
 </body>
+
 </html>
 EOT
 ```
