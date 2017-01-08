@@ -4,9 +4,9 @@
 
 ## Setup
 
-1. Create a GitHub repository on https://www.github.com (or locally on the terminal with `git`)
-2. Clone the repository e.g. `git clone https://github.com/civiclabsconsulting/github-pages-https-examples.git`
-3. Add a `docs` folder and include an `index.html` file there
+- Create a GitHub repository on https://www.github.com (or locally on the terminal with `git`)
+- Clone the repository e.g. `git clone https://github.com/civiclabsconsulting/github-pages-https-examples.git`
+- Add a `docs` folder and include an `index.html` file there
 
 ```
 mdkir docs
@@ -28,5 +28,6 @@ cat <<EOT>> docs/index.html
 EOT
 ```
 
-5. Navigate to the GitHub repository settings and navigate to "Options" > "GitHub Pages" and select the `master branch /docs folder` source
-6. Click "Save" and you're done!
+- Navigate to the GitHub repository settings and navigate to "Options" > "GitHub Pages" and select the `master branch /docs folder` source
+- Optionally choose a theme in "Options" > "GitHub Pages"
+- Click "Save" and you're done!
