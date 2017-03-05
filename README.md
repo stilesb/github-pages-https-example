@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/stilesb/github-pages-https-example.svg?branch=master)](https://travis-ci.org/stilesb/github-pages-https-example)
+
 # github-pages-https-example
 
 *For demonstrating how to setup an HTTPS-enabled GitHub Pages website*
