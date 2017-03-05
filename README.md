@@ -46,6 +46,6 @@ If you're using a custom domain and/or would like SSL support, here, we're going
 
 - Head over to `https://www.cloudflare.com` and register a new account
 - Create a site, entering the custom domain of your site
-- Transfer your DNS entries from your previous DNS provider to CloudFlare. There should be one "Type A" entry (name is your custom domain, value is the GitHub IP address). The second will be a "CNAME" entry (name is "www" and value is your GitHub Pages account URL)
+- Transfer your DNS entries from your current DNS provider to CloudFlare. There should be one "Type A" entry (name is your custom domain, value is the GitHub IP address). The second will be a "CNAME" entry (name is "www" and value is your GitHub Pages account URL)
 - When done, add pages rules to enforce HTTPS and forward your base URL to www.
 - You're done!
