@@ -38,16 +38,11 @@ EOF
 - Optionally choose a theme in "Options" > "GitHub Pages"
 - Click "Save"
 - Add new two records to your domain DNS. In this example I'm using Google Domains.
-
-![](docs/images/google-domains-dns-settings.png?raw=true)
-
-Note: Always keep the `www` CNAME entry equal to your GitHub Pages account URL i.e. `{username}.github.io`.
-
 - Browse to your site's URL - it should be working. But if you have a custom domain you'll have SSL errors.
 
 ### Custom Domains
 
-If you're using a custom domain and/or would like SSL support, here, we're going to do so using CloudFlare
+If you're using a custom domain and/or would like SSL support, here, we're going to set this up using CloudFlare.
 
 - Head over to `https://www.cloudflare.com` and register a new account
 - Create a site, entering the custom domain of your site
