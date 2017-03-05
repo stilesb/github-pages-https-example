@@ -10,7 +10,7 @@
 - Create a repository
 - Clone the repository locally
 
-`git clone https://github.com/civiclabsconsulting/github-pages-https-examples.git`
+`git clone https://github.com/stilesb/github-pages-https-examples.git`
 
 - Add a `docs` folder and include an `index.html` file there
 
