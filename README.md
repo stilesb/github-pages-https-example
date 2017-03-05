@@ -1,47 +1,54 @@
 # github-pages-https-example
 
-**For demonstrating how to setup a HTTPS-enabled GitHub Pages website**
+*For demonstrating how to setup an HTTPS-enabled GitHub Pages website*
 
 ## Setup
 
-- Create a GitHub repository on https://www.github.com (or locally on the terminal with `git`)
-- Clone the repository e.g. `git clone https://github.com/civiclabsconsulting/github-pages-https-examples.git`
+- Create a GitHub user account on https://www.github.com
+- Create a repository
+- Clone the repository locally
+
+`git clone https://github.com/civiclabsconsulting/github-pages-https-examples.git`
+
 - Add a `docs` folder and include an `index.html` file there
 
-```
+```bash
+$ mkdir docs
+$ cat <<EOF>> docs/index.html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <title>HTML5 Boilerplate</title>
+    <title>GitHub Pages HTTPS Example</title>
     <!--[if IE]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
-
 <body>
-    <h1>HTML5 Boilerplate</h1>
-    <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
-    <script type="text/javascript">
-        window.cookieconsent_options = {
-            "message": "This website uses cookies to ensure you get the best experience on our website",
-            "dismiss": "Got it!",
-            "learnMore": "More info",
-            "link": null,
-            "theme": "light-bottom"
-        };
-    </script>
-
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
-    <!-- End Cookie Consent plugin -->
-
+    <h1>GitHub Pages HTTPS Example</h1>
 </body>
-
 </html>
-EOT
+EOF
 ```
 
-- Navigate to the GitHub repository settings and navigate to "Options" > "GitHub Pages" and select the `master branch /docs folder` source
+- Navigate to the GitHub repository settings and head to "Options" > "GitHub Pages" and select the `master branch /docs folder` source
+- Optionally add your custom domain - if you do so, you'll need to use CloudFlare for SSL
 - Optionally choose a theme in "Options" > "GitHub Pages"
-- Click "Save" and you're done!
+- Click "Save"
+- Add new two records to your domain DNS. In this example I'm using Google Domains.
+
+![](docs/images/google-domains-dns-settings.png?raw=true)
+
+Note: Always keep the `www` CNAME entry equal to your GitHub Pages account URL i.e. `{username}.github.io`.
+
+- Browse to your site's URL - it should be working. But if you have a custom domain you'll have SSL errors.
+
+### Custom Domains
+
+**Next, we're going to setup a CloudFlare account and site to act as a DNS provider for valid SSL certs**
+
+- Head over to https://www.cloudflare.com` and register a new account
+- Create a site, entering the custom domain of your site
+- Transfer your DNS entries from your previous DNS provider to CloudFlare. There should be one "Type A" entry (name is your custom domain, value is the GitHub IP address). The second will be a "CNAME" entry (name is "www" and value is your GitHub Pages account URL)
+- When done, add pages rules to enforce HTTPS and forward your base URL to www.
+- You're done!
