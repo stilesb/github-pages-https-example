@@ -57,3 +57,7 @@ If you're using a custom domain and/or would like SSL support, here, we're going
 
 - When done, you might want to add CloudFlare pages rules to enforce HTTPS and forward your base URL to www.
 - You're done!
+
+#### Notes
+
+- GitHub pages cannot be used in repositories with submodules.
